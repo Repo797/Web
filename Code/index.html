@@ -4,64 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><$BlogPageTitle$></title>
-    <style>
-        .button {
-            display: inline-block;
-            margin: 10px;
-            background-color: white;
-            border: 2px solid #333;
-            border-radius: 10px;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #333;
-            color: white;
-        }
-    </style>
 </head>
 <body style="font-family: Arial, sans-serif; background-color: #FDF0DD; margin: 0; padding: 0;">
     <div style="max-width: 800px; margin: 0 auto; padding: 20px; text-align: center;">
-        <h1 style="margin-bottom: 20px;">
-            <img src="img.png" alt="Scoop Codes" style="max-width: 100%; height: auto;">
-        </h1>
-        <a href="#" class="button" style="width: 100px; height: 100px; line-height: 100px; font-size: 16px;">
-            C++
-        </a>
-        <a href="#" class="button" style="width: 100px; height: 100px; line-height: 100px; font-size: 16px;">
-            Java
-        </a>
-        <a href="#" class="button" style="width: 100px; height: 100px; line-height: 100px; font-size: 16px;">
-            C
-        </a>
+        <h1 style="font-size: 24px; margin-bottom: 20px; color: #333;">Scoop Web</h1>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <a href="#" 
+               style="display: inline-block; width: 180px; height: 50px; margin: 10px; background-color: white; border: 2px solid #333; border-radius: 5px; text-align: center; text-decoration: none; color: #333; line-height: 50px; font-size: 16px; transition: background-color 0.3s ease, color 0.3s ease; cursor: pointer;" 
+               onmouseover="this.style.backgroundColor='#333'; this.style.color='white';" 
+               onmouseout="this.style.backgroundColor='white'; this.style.color='#333';">
+               Blog
+            </a>
+            <a href="#" 
+               style="display: inline-block; width: 180px; height: 50px; margin: 10px; background-color: white; border: 2px solid #333; border-radius: 5px; text-align: center; text-decoration: none; color: #333; line-height: 50px; font-size: 16px; transition: background-color 0.3s ease, color 0.3s ease; cursor: pointer;" 
+               onmouseover="this.style.backgroundColor='#333'; this.style.color='white';" 
+               onmouseout="this.style.backgroundColor='white'; this.style.color='#333';">
+               Google Drive
+            </a>
+            <a href="#" 
+               style="display: inline-block; width: 180px; height: 50px; margin: 10px; background-color: white; border: 2px solid #333; border-radius: 5px; text-align: center; text-decoration: none; color: #333; line-height: 50px; font-size: 16px; transition: background-color 0.3s ease, color 0.3s ease; cursor: pointer;" 
+               onmouseover="this.style.backgroundColor='#333'; this.style.color='white';" 
+               onmouseout="this.style.backgroundColor='white'; this.style.color='#333';">
+               Tool
+            </a>
+        </div>
     </div>
-    <script>
-        function adjustButtonSize() {
-            var buttons = document.querySelectorAll('a.button');
-            buttons.forEach(function(button) {
-                if (window.innerWidth <= 600) {
-                    button.style.width = '80px';
-                    button.style.height = '80px';
-                    button.style.lineHeight = '80px';
-                    button.style.fontSize = '14px';
-                } else if (window.innerWidth <= 400) {
-                    button.style.width = '70px';
-                    button.style.height = '70px';
-                    button.style.lineHeight = '70px';
-                    button.style.fontSize = '12px';
-                } else {
-                    button.style.width = '100px';
-                    button.style.height = '100px';
-                    button.style.lineHeight = '100px';
-                    button.style.fontSize = '16px';
-                }
-            });
-        }
-
-        window.addEventListener('resize', adjustButtonSize);
-        window.addEventListener('DOMContentLoaded', adjustButtonSize);
-    </script>
 </body>
 </html>
