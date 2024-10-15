@@ -11,12 +11,12 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            height: 100vh;
+            position: relative; /* Allow absolute positioning inside */
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            position: relative; /* Allow absolute positioning inside */
+            justify-content: flex-start; /* Align items to the top */
         }
 
         /* Header styling */
@@ -32,23 +32,22 @@
 
         /* Icon styling for the header */
         .icon {
-            width: 200px; /* Larger icon size */
-            height: auto;  /* maintain aspect ratio */
-            margin: 0; /* remove margin */
+            width: 150px; /* Icon size optimized for mobile */
+            height: auto; /* Maintain aspect ratio */
         }
 
         /* Container for the button */
         .container {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             max-width: 90%; /* Limit container width */
-            padding: 20px;
-            margin-top: 100px; /* Add margin to push content down below the icon */
+            height: 100%; /* Full height to center button */
             position: absolute; /* Position container absolutely */
             top: 50%; /* Center vertically */
             transform: translateY(-50%); /* Adjust to perfect center */
+            text-align: center; /* Center text inside */
         }
 
         /* Button styling for mobile */
@@ -60,7 +59,7 @@
             font-size: 18px;
             border-radius: 10px;
             text-decoration: none;
-            width: 100%; /* make button full-width */
+            width: 100%; /* Make button full-width */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
             max-width: 300px; /* Limit button width on larger screens */
@@ -78,7 +77,7 @@
                 padding: 12px 20px;
             }
             .icon {
-                width: 120px; /* Smaller icon for small screens */
+                width: 100px; /* Smaller icon for small screens */
             }
         }
 
@@ -89,7 +88,7 @@
                 padding: 15px 25px;
             }
             .icon {
-                width: 180px; /* Adjusted size for medium mobile screens */
+                width: 150px; /* Adjusted size for medium mobile screens */
             }
         }
     </style>
