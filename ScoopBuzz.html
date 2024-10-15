@@ -4,75 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoop Buzz</title>
-    <style>
+   <style>
         /* Main styling for mobile-first design */
         body {
-            background-color: #FDF0DD; /* background color */
+            background-color: #FDF0DD; /* Background color */
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align items horizontally */
+            height: 100vh; /* Full height for the viewport */
+            overflow: hidden; /* Prevent overflow */
         }
 
-        /* Container for icon and button */
+        /* Header styling */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Center icon horizontally */
+            padding: 20px 0; /* Padding for top and bottom */
+        }
+
+        /* Icon styling for the header */
+        .icon {
+            width: 80%; /* Responsive icon size */
+            max-width: 350px; /* Maximum size for larger screens */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure proper block layout */
+        }
+
+        /* Main content styling */
         .container {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 90%; /* Limit container width */
-            padding: 20px;
-        }
-
-        /* Icon styling */
-        .icon {
-            width: 240px; /* icon size optimized for mobile */
-            height: auto;  /* maintain aspect ratio */
-            margin-bottom: 20px; /* spacing between icon and button */
+            justify-content: center; /* Center button vertically */
+            align-items: center; /* Center button horizontally */
+            flex: 1; /* Take remaining space */
+            padding: 20px; /* Padding around the button */
         }
 
         /* Button styling for mobile */
         .link-button {
             display: inline-block;
-            background-color: #FFBD59; /* button color */
-            color: #FFFFFF; /* button text color */
-            padding: 15px 25px;
-            font-size: 18px;
+            background-color: #FFBD59; /* Button color */
+            color: #FFFFFF; /* Button text color */
+            padding: 25px 40px; /* Increased padding for larger button */
+            font-size: 22px; /* Decreased font size for better fit */
             border-radius: 10px;
             text-decoration: none;
-            width: 100%; /* make button full-width */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-            max-width: 300px; /* Limit button width on larger screens */
+            width: 100%; /* Make button full-width */
+            max-width: 260px; /* Limit button width on larger screens */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+            transition: background-color 0.3s ease, transform 0.2s; /* Added transform transition */
         }
 
         /* Hover effect for button */
         .link-button:hover {
-            background-color: #e6a247; /* darker shade of the button color */
+            background-color: #e6a247; /* Darker shade of the button color */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
         }
 
-        /* Adjustments for small devices (portrait mode) */
+        /* Responsive adjustments */
         @media (max-width: 480px) {
             .link-button {
-                font-size: 16px;
-                padding: 12px 20px;
+                font-size: 24px; /* Further decrease font size for mobile */
+                padding: 30px 50px; /* Further increase padding for mobile */
+                max-width: 220px; /* Decrease button width for mobile */
             }
             .icon {
-                width: 120px; /* Smaller icon for small screens */
+                width: 90%; /* Full width for small screens */
             }
         }
 
-        /* Adjustments for larger mobile screens */
         @media (min-width: 481px) and (max-width: 768px) {
             .link-button {
-                font-size: 18px;
-                padding: 15px 25px;
+                font-size: 20px; /* Normal font size for medium screens */
+                padding: 25px 40px; /* Adjusted padding */
             }
             .icon {
-                width: 180px; /* Adjusted size for medium mobile screens */
+                width: 80%; /* 80% width for medium screens */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .icon {
+                width: 400px; /* Fixed size for larger screens */
             }
         }
     </style>
