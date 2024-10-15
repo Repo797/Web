@@ -35,40 +35,40 @@
         /* Header Styling */
         header {
             text-align: center;
-            padding: 80px 20px;
+            padding: 60px 20px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: var(--white);
-            position: relative; /* Positioning for overlap */
-            box-shadow: 0 4px 15px var(--shadow-color); /* Subtle shadow */
-            margin-bottom: 40px; /* Space below header */
+            position: relative;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            margin-bottom: 40px;
         }
 
         /* Header Image Styling */
         .header-image {
-            width: 100%; /* Make image responsive */
-            max-width: 600px; /* Limit max width */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: var(--border-radius); /* Rounded corners */
-            margin-top: -50px; /* Overlap header */
-            box-shadow: 0 4px 15px var(--shadow-color); /* Subtle shadow */
-            transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* Transition for hover effect */
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin-top: -30px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
         }
 
         .header-image:hover {
-            transform: scale(1.05); /* Slightly enlarge on hover */
-            box-shadow: 0 8px 30px var(--shadow-color); /* Darker shadow on hover */
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px var(--shadow-color);
         }
 
         h1 {
-            font-size: 3em; /* Larger heading for prominence */
-            margin: 20px 0; /* Add margin for spacing */
-            text-transform: uppercase; /* Uppercase text for header */
+            font-size: 2.5em;
+            margin: 20px 0;
+            text-transform: uppercase;
         }
 
         p {
-            font-size: 1.3em;
-            margin: 10px 0; /* Add margin for spacing */
-            opacity: 0.9; /* Slightly faded for a modern look */
+            font-size: 1.2em;
+            margin: 10px 0;
+            opacity: 0.9;
         }
 
         /* Main Content Styling */
@@ -76,11 +76,11 @@
             width: 100%;
             max-width: 900px;
             padding: 20px;
-            flex: 1; /* Allow main to grow and take remaining space */
+            flex: 1;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center align main content */
-            margin: 0 auto; /* Center main content */
+            align-items: center;
+            margin: 0 auto;
         }
 
         /* Feature Section */
@@ -88,42 +88,42 @@
             background-color: var(--white);
             color: var(--text-color);
             margin: 20px 0;
-            padding: 30px; /* Increased padding for spaciousness */
+            padding: 20px;
             border-radius: var(--border-radius);
-            box-shadow: 0 4px 20px var(--shadow-color); /* Subtle shadow */
-            width: 100%; /* Ensure feature section takes full width */
-            max-width: 700px; /* Limit max width */
-            text-align: center; /* Center align text in feature sections */
+            box-shadow: 0 4px 20px var(--shadow-color);
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
             transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-            position: relative; /* Position for pseudo-elements */
-            overflow: hidden; /* Hide overflow for animations */
+            position: relative;
+            overflow: hidden;
         }
 
         .feature:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 8px 30px var(--shadow-color); /* Darker shadow on hover */
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px var(--shadow-color);
         }
 
         .feature h2 {
             color: var(--primary-color);
-            margin-top: 0; /* Remove margin for better alignment */
-            font-size: 2em; /* Feature heading size */
-            margin-bottom: 10px; /* Margin below heading */
+            margin-top: 0;
+            font-size: 1.8em;
+            margin-bottom: 10px;
         }
 
         /* Image Styling for Features */
         .feature img {
-            width: 100%; /* Make image responsive */
-            max-width: 350px; /* Limit max width for images */
-            height: auto; /* Maintain aspect ratio */
-            margin: 15px 0; /* Add space around images */
-            border-radius: var(--border-radius); /* Rounded corners for images */
-            box-shadow: 0 4px 10px var(--shadow-color); /* Subtle shadow for images */
-            transition: transform var(--transition-speed); /* Transition for hover effect */
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 15px 0;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: transform var(--transition-speed);
         }
 
         .feature img:hover {
-            transform: scale(1.05); /* Slightly enlarge image on hover */
+            transform: scale(1.05);
         }
 
         /* Footer Styling */
@@ -133,43 +133,35 @@
             background-color: var(--primary-color);
             color: var(--white);
             width: 100%;
-            box-shadow: 0 -4px 10px var(--shadow-color); /* Shadow on top */
-            margin-top: 40px; /* Space above footer */
-        }
-
-        /* Animation Keyframes */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px); /* Start from below */
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0); /* End at original position */
-            }
+            box-shadow: 0 -4px 10px var(--shadow-color);
+            margin-top: 40px;
         }
 
         /* Responsive Styles */
         @media (max-width: 600px) {
             h1 {
-                font-size: 2.5em; /* Smaller heading size for mobile */
+                font-size: 2em;
             }
 
             p {
-                font-size: 1em; /* Smaller paragraph size for mobile */
+                font-size: 1em;
             }
 
             .feature {
-                padding: 20px; /* Less padding for mobile */
+                padding: 15px;
             }
 
             .feature h2 {
-                font-size: 1.6em; /* Smaller feature heading */
+                font-size: 1.5em;
             }
 
             .feature img {
-                max-width: 90%; /* Make images larger on mobile */
+                max-width: 85%;
+            }
+
+            .header-image {
+                max-width: 100%;
+                margin-top: -10px;
             }
         }
     </style>
@@ -178,19 +170,19 @@
 <body>
     <header>
         <img src="main.png" alt="Scoop 2.0" class="header-image" /> <!-- Placeholder for header image -->
-        <h1>Introducing Scoop 2.0!</h1> <!-- Main heading -->
+        <h1>Introducing Scoop 2.0!</h1>
         <p>We are more than a question paper app now!</p>
     </header>
 
     <main>
         <section class="feature" id="scoop-docs">
             <img src="doc_s.png" alt="Scoop Docs" /> <!-- Placeholder for image -->
-            <p>Scoop Docs is a document submission and sharing feature that enables students to upload and share academic materials like notes, assignments, and exam papers. Users can organize content by department, course, semester, and document type, making it easy to find relevant resources. Uploaded documents are subject to an approval process to ensure quality before becoming available to others. Once approved, these documents can be viewed by users within the app. The feature promotes peer learning and content sharing, helping students access useful study materials in a structured and efficient manner.</p>
+            <p>Scoop Docs is a document submission and sharing feature that enables students to upload and share academic materials like notes, assignments, and exam papers. Users can organize content by department, course, semester, and document type, making it easy to find relevant resources. Uploaded documents are subject to an approval process to ensure quality before becoming available to others. Once approved, these documents can be viewed by users within the app.</p>
         </section>
 
         <section class="feature" id="scoop-buzz">
             <img src="buzz.png" alt="Scoop Buzz" /> <!-- Placeholder for image -->
-            <p>Scoop Buzz is a platform within the Scoop app that keeps users informed with the latest updates, news, and announcements. It offers a user-friendly experience, presenting important information such as academic updates, events, and other relevant content. Along with staying updated, users also have the ability to contribute by submitting their own "Buzz" to share important news or updates with the community. This feature encourages active participation, making Scoop Buzz a dynamic hub for relevant information and peer-driven contributions.</p>
+            <p>Scoop Buzz is a platform within the Scoop app that keeps users informed with the latest updates, news, and announcements. Users can also submit their own "Buzz" to share important news or updates with the community, encouraging active participation and making it a dynamic hub for relevant information.</p>
         </section>
     </main>
 
