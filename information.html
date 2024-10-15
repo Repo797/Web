@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoop 2.0 Launch</title>
+    <style>
+        /* Color Definitions */
+        :root {
+            --background-color: #F9F9F9; /* Light background for readability */
+            --primary-color: #FFBD59; /* Primary color for accents */
+            --secondary-color: #FFC107; /* Secondary color for subtle highlights */
+            --text-color: #333; /* Main text color */
+            --white: #FFFFFF; /* White color */
+            --shadow-color: rgba(0, 0, 0, 0.15); /* Shadow color */
+            --transition-speed: 0.4s; /* Transition speed */
+            --border-radius: 10px; /* Border radius for elements */
+            --font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+        }
+
+        /* General Styles */
+        body {
+            background-color: var(--background-color);
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes at least full height of viewport */
+            overflow-y: auto; /* Allow vertical scrolling */
+            line-height: 1.6; /* Improve readability */
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            position: relative; /* Positioning for overlap */
+            box-shadow: 0 4px 15px var(--shadow-color); /* Subtle shadow */
+            margin-bottom: 40px; /* Space below header */
+        }
+
+        /* Header Image Styling */
+        .header-image {
+            width: 100%; /* Make image responsive */
+            max-width: 600px; /* Limit max width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: var(--border-radius); /* Rounded corners */
+            margin-top: -50px; /* Overlap header */
+            box-shadow: 0 4px 15px var(--shadow-color); /* Subtle shadow */
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed); /* Transition for hover effect */
+        }
+
+        .header-image:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 8px 30px var(--shadow-color); /* Darker shadow on hover */
+        }
+
+        h1 {
+            font-size: 3em; /* Larger heading for prominence */
+            margin: 20px 0; /* Add margin for spacing */
+            text-transform: uppercase; /* Uppercase text for header */
+        }
+
+        p {
+            font-size: 1.3em;
+            margin: 10px 0; /* Add margin for spacing */
+            opacity: 0.9; /* Slightly faded for a modern look */
+        }
+
+        /* Main Content Styling */
+        main {
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+            flex: 1; /* Allow main to grow and take remaining space */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align main content */
+            margin: 0 auto; /* Center main content */
+        }
+
+        /* Feature Section */
+        .feature {
+            background-color: var(--white);
+            color: var(--text-color);
+            margin: 20px 0;
+            padding: 30px; /* Increased padding for spaciousness */
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px var(--shadow-color); /* Subtle shadow */
+            width: 100%; /* Ensure feature section takes full width */
+            max-width: 700px; /* Limit max width */
+            text-align: center; /* Center align text in feature sections */
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            position: relative; /* Position for pseudo-elements */
+            overflow: hidden; /* Hide overflow for animations */
+        }
+
+        .feature:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 30px var(--shadow-color); /* Darker shadow on hover */
+        }
+
+        .feature h2 {
+            color: var(--primary-color);
+            margin-top: 0; /* Remove margin for better alignment */
+            font-size: 2em; /* Feature heading size */
+            margin-bottom: 10px; /* Margin below heading */
+        }
+
+        /* Image Styling for Features */
+        .feature img {
+            width: 100%; /* Make image responsive */
+            max-width: 350px; /* Limit max width for images */
+            height: auto; /* Maintain aspect ratio */
+            margin: 15px 0; /* Add space around images */
+            border-radius: var(--border-radius); /* Rounded corners for images */
+            box-shadow: 0 4px 10px var(--shadow-color); /* Subtle shadow for images */
+            transition: transform var(--transition-speed); /* Transition for hover effect */
+        }
+
+        .feature img:hover {
+            transform: scale(1.05); /* Slightly enlarge image on hover */
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            width: 100%;
+            box-shadow: 0 -4px 10px var(--shadow-color); /* Shadow on top */
+            margin-top: 40px; /* Space above footer */
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Start from below */
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em; /* Smaller heading size for mobile */
+            }
+
+            p {
+                font-size: 1em; /* Smaller paragraph size for mobile */
+            }
+
+            .feature {
+                padding: 20px; /* Less padding for mobile */
+            }
+
+            .feature h2 {
+                font-size: 1.6em; /* Smaller feature heading */
+            }
+
+            .feature img {
+                max-width: 90%; /* Make images larger on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="main.png" alt="Scoop 2.0" class="header-image" /> <!-- Placeholder for header image -->
+        <h1>Introducing Scoop 2.0!</h1> <!-- Main heading -->
+        <p>We are more than a question paper app now!</p>
+    </header>
+
+    <main>
+        <section class="feature" id="scoop-docs">
+            <img src="doc_s.png" alt="Scoop Docs" /> <!-- Placeholder for image -->
+            <p>Scoop Docs is a document submission and sharing feature that enables students to upload and share academic materials like notes, assignments, and exam papers. Users can organize content by department, course, semester, and document type, making it easy to find relevant resources. Uploaded documents are subject to an approval process to ensure quality before becoming available to others. Once approved, these documents can be viewed by users within the app. The feature promotes peer learning and content sharing, helping students access useful study materials in a structured and efficient manner.</p>
+        </section>
+
+        <section class="feature" id="scoop-buzz">
+            <img src="buzz.png" alt="Scoop Buzz" /> <!-- Placeholder for image -->
+            <p>Scoop Buzz is a platform within the Scoop app that keeps users informed with the latest updates, news, and announcements. It offers a user-friendly experience, presenting important information such as academic updates, events, and other relevant content. Along with staying updated, users also have the ability to contribute by submitting their own "Buzz" to share important news or updates with the community. This feature encourages active participation, making Scoop Buzz a dynamic hub for relevant information and peer-driven contributions.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Scoop. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
