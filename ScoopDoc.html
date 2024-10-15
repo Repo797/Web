@@ -13,32 +13,42 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             height: 100vh;
             text-align: center;
+            position: relative; /* Allow absolute positioning inside */
         }
 
         /* Header styling */
         header {
             width: 100%;
-            padding: 20px;
-            background-color: #FDF0DD; /* Same as background */
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start; /* Align items to the left */
+            padding: 20px;
+            position: absolute; /* Position header absolutely */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
         }
 
         /* Icon styling for the header */
         .icon {
-            width: 300px; /* icon size optimized for mobile */
+            width: 200px; /* Larger icon size */
             height: auto;  /* maintain aspect ratio */
+            margin: 0; /* remove margin */
         }
 
         /* Container for the button */
         .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             max-width: 90%; /* Limit container width */
             padding: 20px;
+            margin-top: 100px; /* Add margin to push content down below the icon */
+            position: absolute; /* Position container absolutely */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust to perfect center */
         }
 
         /* Button styling for mobile */
@@ -86,7 +96,7 @@
 </head>
 <body>
 
-    <!-- Header with image -->
+    <!-- Header with image in the top left corner -->
     <header>
         <img src="Docs.png" alt="Scoop Icon" class="icon">
     </header>
