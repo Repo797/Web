@@ -7,15 +7,15 @@
     <style>
         /* Main styling for mobile-first design */
         body {
-            background-color: #FDF0DD; /* background color */
+            background-color: #FDF0DD; /* Background color */
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center; /* Center align items horizontally */
-            justify-content: flex-start; /* Align items to the top */
+            height: 100vh; /* Full height for the viewport */
+            overflow: hidden; /* Prevent overflow */
         }
 
         /* Header styling */
@@ -23,73 +23,71 @@
             width: 100%;
             display: flex;
             justify-content: center; /* Center icon horizontally */
-            padding: 20px;
-            position: relative; /* Position header relative */
+            padding: 20px 0; /* Padding for top and bottom */
         }
 
         /* Icon styling for the header */
         .icon {
-            width: 300px; /* Increased icon size for better visibility on all screens */
+            width: 80%; /* Responsive icon size */
+            max-width: 400px; /* Maximum size for larger screens */
             height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure proper block layout */
         }
 
-        /* Container for the button */
+        /* Main content styling */
         .container {
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            max-width: 90%; /* Limit container width */
-            height: 100%; /* Full height to center button */
-            margin-top: 20px; /* Space between the icon and the button */
+            justify-content: center; /* Center button vertically */
+            align-items: center; /* Center button horizontally */
+            flex: 1; /* Take remaining space */
+            padding: 20px; /* Padding around the button */
         }
 
         /* Button styling for mobile */
         .link-button {
             display: inline-block;
-            background-color: #FFBD59; /* button color */
-            color: #FFFFFF; /* button text color */
+            background-color: #FFBD59; /* Button color */
+            color: #FFFFFF; /* Button text color */
             padding: 15px 25px;
             font-size: 18px;
             border-radius: 10px;
             text-decoration: none;
             width: 100%; /* Make button full-width */
+            max-width: 300px; /* Limit button width on larger screens */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
-            max-width: 300px; /* Limit button width on larger screens */
         }
 
         /* Hover effect for button */
         .link-button:hover {
-            background-color: #e6a247; /* darker shade of the button color */
+            background-color: #e6a247; /* Darker shade of the button color */
         }
 
-        /* Adjustments for small devices (portrait mode) */
+        /* Responsive adjustments */
         @media (max-width: 480px) {
             .link-button {
                 font-size: 16px;
                 padding: 12px 20px;
             }
             .icon {
-                width: 200px; /* Smaller icon for small screens */
+                width: 100%; /* Full width for small screens */
             }
         }
 
-        /* Adjustments for larger mobile screens */
         @media (min-width: 481px) and (max-width: 768px) {
             .link-button {
                 font-size: 18px;
                 padding: 15px 25px;
             }
             .icon {
-                width: 250px; /* Adjusted size for medium mobile screens */
+                width: 80%; /* 80% width for medium screens */
             }
         }
 
-        /* Adjustments for larger screens */
         @media (min-width: 769px) {
             .icon {
-                width: 300px; /* Larger icon for larger screens */
+                width: 400px; /* Fixed size for larger screens */
             }
         }
     </style>
