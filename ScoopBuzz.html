@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoop Buzz</title>
+    <style>
+        /* Main styling for mobile-first design */
+        body {
+            background-color: #FDF0DD; /* background color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for icon and button */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 90%; /* Limit container width */
+            padding: 20px;
+        }
+
+        /* Icon styling */
+        .icon {
+            width: 240px; /* icon size optimized for mobile */
+            height: auto;  /* maintain aspect ratio */
+            margin-bottom: 20px; /* spacing between icon and button */
+        }
+
+        /* Button styling for mobile */
+        .link-button {
+            display: inline-block;
+            background-color: #FFBD59; /* button color */
+            color: #FFFFFF; /* button text color */
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            width: 100%; /* make button full-width */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            max-width: 300px; /* Limit button width on larger screens */
+        }
+
+        /* Hover effect for button */
+        .link-button:hover {
+            background-color: #e6a247; /* darker shade of the button color */
+        }
+
+        /* Adjustments for small devices (portrait mode) */
+        @media (max-width: 480px) {
+            .link-button {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+            .icon {
+                width: 120px; /* Smaller icon for small screens */
+            }
+        }
+
+        /* Adjustments for larger mobile screens */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .link-button {
+                font-size: 18px;
+                padding: 15px 25px;
+            }
+            .icon {
+                width: 180px; /* Adjusted size for medium mobile screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Icon in the middle -->
+        <img src="buzz.jpg" alt="Scoop Icon" class="icon">
+        
+        <!-- Button in the middle with a link -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqP8gaJOGDlwhxL0-j6TQSPTJSB7xThbr4NrWx087R5N1npg/viewform" class="link-button">Submit a Buzz</a>
+    </div>
+</body>
+</html>
