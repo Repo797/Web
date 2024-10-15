@@ -8,15 +8,15 @@
     <style>
         /* Color Definitions */
         :root {
-            --background-color: #F9F9F9; /* Light background for readability */
-            --primary-color: #FFBD59; /* Primary color for accents */
-            --secondary-color: #FFC107; /* Secondary color for subtle highlights */
-            --text-color: #333; /* Main text color */
-            --white: #FFFFFF; /* White color */
-            --shadow-color: rgba(0, 0, 0, 0.15); /* Shadow color */
-            --transition-speed: 0.4s; /* Transition speed */
-            --border-radius: 10px; /* Border radius for elements */
-            --font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+            --background-color: #F9F9F9;
+            --primary-color: #FFBD59;
+            --secondary-color: #FFC107;
+            --text-color: #333;
+            --white: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.15);
+            --transition-speed: 0.4s;
+            --border-radius: 10px;
+            --font-family: 'Helvetica Neue', Arial, sans-serif;
         }
 
         /* General Styles */
@@ -27,29 +27,28 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure body takes at least full height of viewport */
-            overflow-y: auto; /* Allow vertical scrolling */
-            line-height: 1.6; /* Improve readability */
+            min-height: 100vh;
+            overflow-y: auto;
+            line-height: 1.6;
         }
 
         /* Header Styling */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 60px 15px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: var(--white);
             position: relative;
             box-shadow: 0 4px 15px var(--shadow-color);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
-        /* Header Image Styling */
         .header-image {
             width: 100%;
-            max-width: 450px;
+            max-width: 90%;
             height: auto;
             border-radius: var(--border-radius);
-            margin-top: -30px;
+            margin-top: -40px;
             box-shadow: 0 4px 15px var(--shadow-color);
             transition: transform var(--transition-speed), box-shadow var(--transition-speed);
         }
@@ -61,12 +60,12 @@
 
         h1 {
             font-size: 2.5em;
-            margin: 20px 0;
+            margin: 15px 0;
             text-transform: uppercase;
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin: 10px 0;
             opacity: 0.9;
         }
@@ -74,8 +73,8 @@
         /* Main Content Styling */
         main {
             width: 100%;
-            max-width: 900px;
-            padding: 20px;
+            max-width: 100%;
+            padding: 15px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -95,8 +94,6 @@
             max-width: 700px;
             text-align: center;
             transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-            position: relative;
-            overflow: hidden;
         }
 
         .feature:hover {
@@ -107,14 +104,13 @@
         .feature h2 {
             color: var(--primary-color);
             margin-top: 0;
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 10px;
         }
 
-        /* Image Styling for Features */
         .feature img {
             width: 100%;
-            max-width: 300px;
+            max-width: 100%;
             height: auto;
             margin: 15px 0;
             border-radius: var(--border-radius);
@@ -129,12 +125,25 @@
         /* Footer Styling */
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             background-color: var(--primary-color);
             color: var(--white);
             width: 100%;
             box-shadow: 0 -4px 10px var(--shadow-color);
-            margin-top: 40px;
+            margin-top: 30px;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive Styles */
@@ -144,7 +153,7 @@
             }
 
             p {
-                font-size: 1em;
+                font-size: 0.95em;
             }
 
             .feature {
@@ -156,12 +165,11 @@
             }
 
             .feature img {
-                max-width: 85%;
+                max-width: 95%;
             }
 
-            .header-image {
-                max-width: 100%;
-                margin-top: -10px;
+            header {
+                padding: 50px 10px;
             }
         }
     </style>
@@ -169,20 +177,20 @@
 
 <body>
     <header>
-        <img src="main.png" alt="Scoop 2.0" class="header-image" /> <!-- Placeholder for header image -->
+        <img src="main.png" alt="Scoop 2.0" class="header-image" />
         <h1>Introducing Scoop 2.0!</h1>
         <p>We are more than a question paper app now!</p>
     </header>
 
     <main>
         <section class="feature" id="scoop-docs">
-            <img src="doc_s.png" alt="Scoop Docs" /> <!-- Placeholder for image -->
-            <p>Scoop Docs is a document submission and sharing feature that enables students to upload and share academic materials like notes, assignments, and exam papers. Users can organize content by department, course, semester, and document type, making it easy to find relevant resources. Uploaded documents are subject to an approval process to ensure quality before becoming available to others. Once approved, these documents can be viewed by users within the app.</p>
+            <img src="doc_s.png" alt="Scoop Docs" />
+            <p>Scoop Docs is a document submission and sharing feature that enables students to upload and share academic materials like notes, assignments, and exam papers. Users can organize content by department, course, semester, and document type, making it easy to find relevant resources. Uploaded documents are subject to an approval process to ensure quality before becoming available to others. Once approved, these documents can be viewed by users within the app. The feature promotes peer learning and content sharing, helping students access useful study materials in a structured and efficient manner.</p>
         </section>
 
         <section class="feature" id="scoop-buzz">
-            <img src="buzz.png" alt="Scoop Buzz" /> <!-- Placeholder for image -->
-            <p>Scoop Buzz is a platform within the Scoop app that keeps users informed with the latest updates, news, and announcements. Users can also submit their own "Buzz" to share important news or updates with the community, encouraging active participation and making it a dynamic hub for relevant information.</p>
+            <img src="buzz.png" alt="Scoop Buzz" />
+            <p>Scoop Buzz is a platform within the Scoop app that keeps users informed with the latest updates, news, and announcements. It offers a user-friendly experience, presenting important information such as academic updates, events, and other relevant content. Along with staying updated, users also have the ability to contribute by submitting their own "Buzz" to share important news or updates with the community. This feature encourages active participation, making Scoop Buzz a dynamic hub for relevant information and peer-driven contributions.</p>
         </section>
     </main>
 
