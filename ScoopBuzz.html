@@ -28,8 +28,8 @@
 
         /* Icon styling for the header */
         .icon {
-            width: 50%; /* Smaller responsive icon size */
-            max-width: 150px; /* Maximum size for larger screens */
+            width: 60%; /* Larger responsive icon size */
+            max-width: 300px; /* Increased maximum size for larger screens */
             height: auto; /* Maintain aspect ratio */
             display: block; /* Ensure proper block layout */
         }
@@ -82,7 +82,7 @@
                 padding: 20px 30px; 
             }
             .icon {
-                width: 70%; 
+                width: 80%; /* Larger icon size for smaller screens */
             }
         }
 
@@ -92,28 +92,25 @@
                 padding: 25px 40px; 
             }
             .icon {
-                width: 40%; 
+                width: 50%; /* Medium icon size for tablets */
             }
         }
 
         @media (min-width: 769px) {
             .icon {
-                width: 100px; 
+                width: 300px; /* Larger icon size for desktops */
             }
         }
     </style>
 </head>
 <body>
 
-    
     <header>
         <img src="buzz.png" alt="Scoop Icon" class="icon">
     </header>
 
-   
     <div class="container">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqP8gaJOGDlwhxL0-j6TQSPTJSB7xThbr4NrWx087R5N1npg/viewform" class="link-button">
-          
             Submit a Buzz
         </a>
     </div>
