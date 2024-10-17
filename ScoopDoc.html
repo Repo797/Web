@@ -28,8 +28,8 @@
 
         /* Icon styling for the header */
         .icon {
-            width: 50%; /* Smaller responsive icon size */
-            max-width: 150px; /* Maximum size for larger screens */
+            width: 80%; /* Reverted to 80% width */
+            max-width: 350px; /* Reverted to 350px max width */
             height: auto; /* Maintain aspect ratio */
             display: block; /* Ensure proper block layout */
         }
@@ -72,7 +72,7 @@
                 padding: 20px 30px; 
             }
             .icon {
-                width: 70%; 
+                width: 90%; /* 90% width for small screens */
             }
         }
 
@@ -82,13 +82,13 @@
                 padding: 25px 40px; 
             }
             .icon {
-                width: 40%; 
+                width: 80%; /* 80% width for medium screens */
             }
         }
 
         @media (min-width: 769px) {
             .icon {
-                width: 100px; 
+                width: 400px; /* Fixed size for larger screens */
             }
         }
     </style>
